@@ -61,7 +61,6 @@
                                             <p>{{a.designations}}</p>
                                             <p><b>{{a.dateDeRendu | date}}</b></p>
                                             <p *ngIf="a.rendu; else nonsoumis" appRendu><b>{{a.matiere}}</b>, rendu par <b>{{a.nom}} </b></p>
-                                            <p appNonRendu></p>
                                             <ng-template #nonsoumis>
                                                 <p appNonRendu>
                                                     <b>{{a.matiere}}</b>, pas encore rendu par <b>{{a.nom}} </b>
