@@ -12,11 +12,9 @@ export class ProfGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    console.log('qsdqsdqqsdfgdf')
-    //return false;
+     //return false;
     return this.authService.isProf().then((isProf) => {
       if (isProf) {
-        alert("GUARD : vous êtes PROFESSEUR)");
         return true;
       } else {
         // On renvoie vers la page d'accueil
